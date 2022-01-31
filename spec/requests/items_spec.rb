@@ -34,7 +34,7 @@ RSpec.describe 'Items API' do
     end
   end
 
-  # Test suite for GET /todos/:todo_id/items/:id
+  # Test suiteS for GET /todos/:todo_id/items/:id DESCRIBES get
   describe 'GET /todos/:todo_id/items/:id' do
     before { get "/todos/#{todo_id}/items/#{id}" }
 
@@ -61,7 +61,7 @@ RSpec.describe 'Items API' do
     end
   end
 
-  # Test suite for PUT /todos/:todo_id/items
+  # Test suite for PUT /todos/:todo_id/items DESCRIBES put
   describe 'POST /todos/:todo_id/items' do
     let(:valid_attributes) { { name: 'Visit Narnia', done: false } }
 
