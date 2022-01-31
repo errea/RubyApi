@@ -2,17 +2,17 @@ class ItemsController < ApplicationController
     before_action :set_todo
     before_action :set_todo_item, only: [:show, :update, :destroy]
   
-    # GET /todos/:todo_id/items
+    # GET /todos/:todo_id/items REST METHODS
     def index
       json_response(@todo.items)
     end
   
-    # GET /todos/:todo_id/items/:id
+    # GET /todos/:todo_id/items/:id REST METHOD
     def show
       json_response(@item)
     end
   
-    # POST /todos/:todo_id/items
+    # POST /todos/:todo_id/items REST METHODS
     def create
       @todo.items.create!(item_params)
       json_response(@todo, :created)
